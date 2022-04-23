@@ -37,6 +37,10 @@ class User:
             if user.username == username:
                 return  user
 
-
+class Credentials:
+    '''
+    class that creates instaces of user accounts
+    '''
+    credentialslist = []
 
         
