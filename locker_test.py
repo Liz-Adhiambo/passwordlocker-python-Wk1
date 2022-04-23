@@ -96,6 +96,16 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.delete_credentials()
         self.assertEqual(len(Credentials.credentialslist), 1)
 
+    def test_search_for_credentials(self):
+        '''
+        Test case to test if credentials can be searched 
+        '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials('Twitter','liz','adhiambo@gmail.com','abcd')
+        test_credentials.save_credentials()
+        find_credentials= Credentials.find_account("Twitter")
+        self.assertEqual(find_credentials.account, test_credentials.account)
+
 
     
        
