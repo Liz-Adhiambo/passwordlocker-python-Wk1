@@ -43,4 +43,11 @@ class Credentials:
     '''
     credentialslist = []
 
+    def __init__(self, account ,username, email , passlock):
+    
+        self.account = account
+        self.username=username
+        self.email = email
+        self.passlock = passlock
+
         
