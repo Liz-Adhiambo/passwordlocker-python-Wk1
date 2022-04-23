@@ -78,7 +78,15 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.username, "liz")
         self.assertEqual(self.new_credentials.email, "adhiambo@gmail.com")
         self.assertEqual(self.new_credentials.passlock, "abcd")
-       
+
+    def test_save_credentials(self):
+        '''
+        check if credentials can be saved
+        '''  
+        self.new_credentials.save_credentials()
+        self.assertEqual(len(Credentials.credentialslist),1)
+
+    
        
 
         
