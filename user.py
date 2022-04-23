@@ -22,4 +22,10 @@ class User:
             """
             User.userlist.append(self)
 
+    def delete_user(self):
+        '''
+        delete a user account
+        '''
+        User.userlist.remove(self)
+
         
