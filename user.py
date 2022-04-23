@@ -50,4 +50,10 @@ class Credentials:
         self.email = email
         self.passlock = passlock
 
+    def save_credentials(self):
+        '''
+        Method to save a users Credentials
+        '''
+        Credentials.credentialslist.append(self)
+
         

@@ -54,8 +54,34 @@ class TestClass(unittest.TestCase):
         found_user = User.find_user("liz")
         self.assertEqual(found_user.username, self.new_user.username)
 
+ #Credentials Class Tests
+
+class TestCredentials(unittest.TestCase):
+
+    def setUp(self):
+            '''
+            setup before a test is run
+            '''
+            self.new_credentials = Credentials('Instagram','liz','adhiambo@gmail.com','abcd')
+    def tearDown(self):
+            '''
+            clear list before any test is run
+            '''
+            Credentials.credentialslist = []
 
     
+    def test_init(self):
+        '''
+        check if instances initialize as expected
+        '''
+        self.assertEqual(self.new_credentials.account, "Instagram")
+        self.assertEqual(self.new_credentials.username, "liz")
+        self.assertEqual(self.new_credentials.email, "adhiambo@gmail.com")
+        self.assertEqual(self.new_credentials.passlock, "abcd")
+       
+       
+
+        
 
 if __name__ == "__main__":
     unittest.main()
