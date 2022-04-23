@@ -106,6 +106,13 @@ class TestCredentials(unittest.TestCase):
         find_credentials= Credentials.find_account("Twitter")
         self.assertEqual(find_credentials.account, test_credentials.account)
 
+    def test_display_credentials(self):
+        '''
+        test if all credentials can be displayed
+        '''
+        self.assertEqual(Credentials.display_credentials(), Credentials.credentialslist)
+
+
 
     
        
