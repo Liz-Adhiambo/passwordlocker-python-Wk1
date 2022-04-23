@@ -11,6 +11,12 @@ class TestClass(unittest.TestCase):
         """
         self.new_user = User('Elizabeth','Adhiambo','liz','1234.')
 
+    def tearDown(self):
+        '''
+        clean up after each test to prevent errors
+        '''
+        User.userlist = []
+
     def test_init(self):
             """
          test_init  Test case to chek if the object has been initialized correctly
@@ -25,6 +31,8 @@ class TestClass(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.userlist),1)
 
+
+    
 
 if __name__ == "__main__":
     unittest.main()
