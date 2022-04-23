@@ -70,6 +70,13 @@ class Credentials:
         for credentials in cls.credentialslist:
             if credentials.account == account:
                 return credentials   
+
+    @classmethod
+    def display_credentials(cls):
+        '''
+        method that returns all credentials
+        '''
+        return cls.credentialslist
        
 
         
